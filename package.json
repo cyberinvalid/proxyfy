@@ -1,0 +1,38 @@
+{
+  "name": "proxyfy",
+  "version": "0.0.1",
+  "description": "Module will help you check tons of proxies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyberinvalid/proxyfy.git"
+  },
+  "author": "@cyberinvalid",
+  "license": "MIT",
+  "keywords": [
+    "proxy",
+    "checker",
+    "proxy server",
+    "proxies",
+    "file",
+    "check proxy",
+    "test proxy"
+  ],
+  "bugs": {
+    "url": "https://github.com/cyberinvalid/proxyfy/issues"
+  },
+  "homepage": "https://github.com/cyberinvalid/proxyfy#readme",
+  "dependencies": {
+    "request": "^2.88.2",
+    "request-promise-native": "^1.0.8"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.3.0",
+    "eslint-config-cyberinvalid": "^1.0.5",
+    "eslint-plugin-import": "^2.21.2"
+  }
+}
