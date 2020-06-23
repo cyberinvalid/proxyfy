@@ -27,12 +27,23 @@ import Proxyfy from 'proxyfy';
 const Proxyfy = require('proxyfy');
 
 const proxyfy = new Proxyfy({
-	url: 'http://www.example.com',
+    url: 'http://www.example.com',
     regex: /Example Domain/
 });
 
 (async () => {
-	const itsWorking = await proxyfy.fromFile('myProxyFile.txt');
+    proxyfy.on('alive', proxy =>
+        console.log(proxy));
+
+    /*  {
+     *		proxy: '123.234.321.32:80',
+     *		host: '123.234.321.32',
+     *		port: '80',
+     *		timeout: 1000
+     *	}
+     */
+
+    const itsWorking = await proxyfy.fromFile('myProxyFile.txt');
     console.log(itsWorking);
     
     /*  [{
@@ -61,7 +72,8 @@ This is default class with following options object:
 
 | Key | Default value | Description |
 | ------ | ------ | ------ |
-| request | `request.defaults({ timeout: 3e4 })` | request-promise-native wrapper |
+| request | ... | request-promise-native wrapper |
 | protocol | `'http'` | Also can be 'https' |
 | url | `'http://www.example.com'` | URI of site to test on regex |
 | regex | `/Example Domain/` | Regex for test of response  |
+| poolSize | 300 | Maximum number of concurrent requests  |

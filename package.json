@@ -1,6 +1,6 @@
 {
   "name": "proxyfy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Module will help you check tons of proxies",
   "main": "index.js",
   "scripts": {
